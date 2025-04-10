@@ -16,3 +16,10 @@ sqlparse==0.5.3
 typing_extensions==4.12.2
 tzdata==2025.1
 urllib3==2.3.0
+function Kindle:supportsScreensaver()
+    if self.isSpecialOffers then
+        return false
+    else
+        return true
+    end
+end

@@ -1,12 +1,11 @@
 from rest_framework import serializers
 from .models import (
-    Nation, RadiantOrder, RadiantPower, Book, Chapter,
-    House, Character, CharacterRadiantOrder, UserFavorite
+    PoliticalEntity, RadiantOrder, RadiantPower, Book, Chapter, Character, UserFavorite
 )
 
-class NationSerializer(serializers.ModelSerializer):
+class PoliticalEntitySerializer(serializers.ModelSerializer):
     class Meta:
-        model = Nation
+        model = PoliticalEntity
         fields = '__all__'
 
 class RadiantOrderSerializer(serializers.ModelSerializer):
@@ -29,19 +28,9 @@ class ChapterSerializer(serializers.ModelSerializer):
         model = Chapter
         fields = '__all__'
 
-class HouseSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = House
-        fields = '__all__'
-
 class CharacterSerializer(serializers.ModelSerializer):
     class Meta:
         model = Character
-        fields = '__all__'
-
-class CharacterRadiantOrderSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = CharacterRadiantOrder
         fields = '__all__'
 
 class UserFavoriteSerializer(serializers.ModelSerializer):
